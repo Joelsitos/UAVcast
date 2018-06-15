@@ -36,7 +36,9 @@ WantedBy=network-online.target
 EOM
 
 # Copy generated UAVcast.service file to systemd
+chmod 644 $FILE
 cp $FILE /lib/systemd/system/
+
 sudo systemctl daemon-reload
 # sudo systemctl enable $FILE
 

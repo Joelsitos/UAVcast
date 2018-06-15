@@ -11,7 +11,7 @@ case $(jq -r '.GSM_Connect' $CONF) in
 			OpenVpn
 			StartBroadcast
 	;;
-	"No")
+	*)
 			#Check if VPN should be enabled
 			OpenVpn
 			StartBroadcast
@@ -20,38 +20,26 @@ esac
 }
 
 function StartBroadcast {
-while true
-do
-sudo ping -c 1 google.com
-	if [[ $? == 0 ]];
-			then
-				echo "Network available."
-				ping -q -w 1 -c 1 `ip r | grep default | cut -d ' ' -f 3` > /dev/null && echo Seems like RPI is connected to Internet, all ok. || echo Seems like your RPI does not have internet connection. Trying to continue anyway.
-							pidof inadyn >/dev/null
-								if [[ $? -ne 0 ]] ; then 
-								inadyn
-								fi
-							case $(jq -r '.Cntrl' $CONF) in
-								"APM")
-									gstreamer
-									Telemetry_Type
-								;;
-								"Navio+")
-									gstreamer
-									ArduPilot
-								;;
-								"Navio2")
-									gstreamer
-									ArduPilot
-								;;
-							esac
-				break;
-			else
-		echo "Network is not available, waiting.."
-	sleep 5
-	fi
-done
-echo "If you see this message, then Network was successfully loaded."
+ping -q -w 1 -c 1 `ip r | grep default | cut -d ' ' -f 3` > /dev/null && echo Seems like RPI is connected to Internet, all ok. || echo Seems like your RPI does not have internet connection. Trying to continue anyway.
+			pidof inadyn >/dev/null
+				if [[ $? -ne 0 ]] ; then 
+				inadyn
+				fi
+			case $(jq -r '.Cntrl' $CONF) in
+				"APM")
+					gstreamer
+					Telemetry_Type
+				;;
+				"Navio+")
+					gstreamer
+					ArduPilot
+				;;
+				"Navio2")
+					gstreamer
+					ArduPilot
+				;;
+			esac
+
 }
 function ModemManager {
     sudo $DIR/./ModemManager/ModemManager.sh Autostart > $DIR/../log/ModemManager.log 2>&1

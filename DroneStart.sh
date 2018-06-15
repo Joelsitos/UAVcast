@@ -22,4 +22,4 @@ echo $(jq -r '.DroneCheck' $CONF)
 fi
 
 #Start DroneInit
-DroneInit
+DroneInit &

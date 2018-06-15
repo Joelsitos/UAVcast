@@ -1,7 +1,7 @@
 {
   "Cntrl": "APM",
   "Telemetry_Type": "gpio",
-  "GCS_address": "uavmatrix.com",
+  "GCS_address": "10.0.0.61",
   "PORT": "14550",
   "secondary_tele": "No",
   "sec_ip_address": "10.0.0.100",
@@ -13,7 +13,7 @@
   "MM_Username": "test",
   "MM_Password": "test",
   "MM_Pin": "1234",
-  "UseCam": "Yes",
+  "UseCam": "No",
   "CameraType": "picam",
   "WIDTH": "1280",
   "HEIGHT": "720",
