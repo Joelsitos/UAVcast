@@ -14,7 +14,7 @@ echo -ne '#                         (1%)\r'
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 #Get Parrent Directory
-Basefolder="$(cd ../; pwd)" 
+Basefolder="$(cd ../; pwd)"
 
 # Create systemctl for easy stop/start/restart
 echo -ne '#####                     (25%)\r'
@@ -78,23 +78,23 @@ argsToLower=$(echo "$args" | tr '[:upper:]' '[:lower:]')
 case $argsToLower in
         "web")
             #Run Web instalation
-            sudo $DIR/./web.sh >> $logfile 2>&1
+            sudo $DIR/./web.sh
         ;;
         *)
          printf "\n\n NOTE!!!  Installing UAVcast without Web Interface \n\n use web argurment ( ./install.sh web ) to install web UI.\n\n" | tee  $logfile 2>&1 
 
 esac
-echo -ne '###############           (60%)\r'
+echo -ne '#####################     (90%)\r'
 ################# COMPILE UAV software ############
 #UAVcast dependencies
 mkdir -p $Basefolder/packages
 cd $Basefolder/packages
 
-echo -ne '#################         (70%)\r'
+echo -ne '######################    (92%)\r'
 #Mavproxy
 git clone https://github.com/UAVmatrix/cmavnode.git >> $logfile 2>&1 
 
-echo -ne '####################      (80%)\r'
+echo -ne '########################  (95%)\r'
 # Create symlink to cmavnode
 sudo ln -s $Basefolder/usr/bin/cmavnode /usr/bin/cmavnode >> $logfile 2>&1
 

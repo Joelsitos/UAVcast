@@ -5,13 +5,13 @@
   "dependencies": {
     "compression": "^1.7.1",
     "express": "^4.15.5",
-    "patternfly": "^3.28.0",
     "shelljs": "^0.7.8",
     "socket.io": "^2.0.3",
     "socket.io-stream": "^0.9.1"
   },
   "devDependencies": {
     "nodemon": "^1.12.1",
+    "patternfly": "^3.28.0",
     "concurrently": "^3.5.0",
     "toastr": "^2.1.2",
     "uuid": "^3.1.0",

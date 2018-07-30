@@ -1,6 +1,28 @@
-
-
- NOTE!!!  Installing UAVcast without Web Interface 
-
- use web argurment ( ./install.sh web ) to install web UI.
-
+[32mStarting UAVcast Installation.(B[m  30/07/2018 21:56:44
+Hit:1 http://raspbian.raspberrypi.org/raspbian stretch InRelease
+Hit:2 http://archive.raspberrypi.org/debian stretch InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+dh-autoreconf is already the newest version (14).
+dnsutils is already the newest version (1:9.10.3.dfsg.P4-12.3+deb9u4).
+gstreamer1.0-plugins-bad is already the newest version (1.10.4-1).
+gstreamer1.0-plugins-good is already the newest version (1.10.4-1).
+gstreamer1.0-tools is already the newest version (1.10.4-1).
+inadyn is already the newest version (1.99.4-1).
+jq is already the newest version (1.5+dfsg-1.3).
+modemmanager is already the newest version (1.6.4-1).
+network-manager is already the newest version (1.6.2-3).
+network-manager-openvpn is already the newest version (1.2.8-2).
+openvpn is already the newest version (2.4.0-6+deb9u2).
+usb-modeswitch is already the newest version (2.5.0+repack0-1).
+0 upgraded, 0 newly installed, 0 to remove and 22 not upgraded.
+Installing nodejs...
+Pi-3 Detected
+Node 10 exsist, skipping
+PM2 Exsist, skipping..
+Installing nodejs...
+Pi-3 Detected
+Node 10 exsist, skipping
+PM2 Exsist, skipping..

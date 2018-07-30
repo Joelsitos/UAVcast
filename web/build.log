@@ -1,0 +1,96 @@
+
+> phantomjs-prebuilt@2.1.16 install /home/pi/UAVcast/web/node_modules/patternfly/node_modules/phantomjs-prebuilt
+> node install.js
+
+PhantomJS not found on PATH
+Unexpected platform or architecture: linux/arm
+It seems there is no binary available for your platform/architecture
+Try to install PhantomJS globally
+npm WARN ajv-keywords@3.2.0 requires a peer of ajv@^6.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN commitlint-config-cz@0.5.0 requires a peer of @commitlint/cli@~3.1.2 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"arm"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: phantomjs-prebuilt@2.1.16 (node_modules/patternfly/node_modules/phantomjs-prebuilt):
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: phantomjs-prebuilt@2.1.16 install: `node install.js`
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: Exit status 1
+
+added 4 packages from 2 contributors and audited 10007 packages in 195.022s
+found 21 vulnerabilities (4 low, 14 moderate, 2 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+[PM2] Applying action restartProcessId on app [UAVcast](ids: 0)
+[PM2][ERROR] Process 0 not found
+Process not found
+┌──────────┬────┬──────┬──────┬──────────┬─────────┬────────┬─────┬────────┬──────┬──────────┐
+│ App name │ id │ mode │ pid  │ status   │ restart │ uptime │ cpu │ mem    │ user │ watching │
+├──────────┼────┼──────┼──────┼──────────┼─────────┼────────┼─────┼────────┼──────┼──────────┤
+│ UAVcast  │ 0  │ fork │ 1616 │ stopping │ 15      │ 0      │ 0%  │ 0 B    │ root │ enabled  │
+└──────────┴────┴──────┴──────┴──────────┴─────────┴────────┴─────┴────────┴──────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Init System found: systemd
+Platform systemd
+Template
+[Unit]
+Description=PM2 process manager
+Documentation=https://pm2.keymetrics.io/
+After=network.target
+
+[Service]
+Type=forking
+User=root
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+Environment=PATH=/opt/nodejs/bin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+Environment=PM2_HOME=/root/.pm2
+PIDFile=/root/.pm2/pm2.pid
+
+ExecStart=/opt/nodejs/lib/node_modules/pm2/bin/pm2 resurrect
+ExecReload=/opt/nodejs/lib/node_modules/pm2/bin/pm2 reload all
+ExecStop=/opt/nodejs/lib/node_modules/pm2/bin/pm2 kill
+
+[Install]
+WantedBy=multi-user.target
+
+Target path
+/etc/systemd/system/pm2-root.service
+Command list
+[ 'systemctl enable pm2-root',
+  'systemctl start pm2-root',
+  'systemctl daemon-reload',
+  'systemctl status pm2-root' ]
+[PM2] Writing init configuration in /etc/systemd/system/pm2-root.service
+[PM2] Making script booting at startup...
+>>> Executing systemctl enable pm2-root
+[DONE] 
+>>> Executing systemctl start pm2-root
+[DONE] 
+>>> Executing systemctl daemon-reload
+[DONE] 
+>>> Executing systemctl status pm2-root
+● pm2-root.service - PM2 process manager
+   Loaded: loaded (/etc/systemd/system/pm2-root.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2018-07-30 21:18:58 UTC; 41min ago
+     Docs: https://pm2.keymetrics.io/
+ Main PID: 23363 (PM2 v2.9.3: God)
+   CGroup: /system.slice/pm2-root.service
+           ‣ 23363 PM2 v2.9.3: God Daemon (/root/.pm2)
+
+Jul 30 21:18:58 raspberrypi pm2[23476]: [PM2] Restoring processes located in /root/.pm2/dump.pm2
+Jul 30 21:18:58 raspberrypi pm2[23476]: [PM2][ERROR] Failed to read dump file in /root/.pm2/dump.pm2.bak
+Jul 30 21:18:58 raspberrypi pm2[23476]: [PM2][ERROR] No processes saved; DUMP file doesn't exist
+Jul 30 21:18:58 raspberrypi pm2[23476]: ┌──────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬───────────┬──────┬──────────┐
+Jul 30 21:18:58 raspberrypi pm2[23476]: │ App name │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem       │ user │ watching │
+Jul 30 21:18:58 raspberrypi pm2[23476]: ├──────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼───────────┼──────┼──────────┤
+Jul 30 21:18:58 raspberrypi pm2[23476]: │ UAVcast  │ 0  │ fork │ 23388 │ online │ 0       │ 5s     │ 43% │ 37.3 MB   │ root │ enabled  │
+Jul 30 21:18:58 raspberrypi pm2[23476]: └──────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴───────────┴──────┴──────────┘
+Jul 30 21:18:58 raspberrypi pm2[23476]:  Use `pm2 show <id|name>` to get more details about an app
+Jul 30 21:18:58 raspberrypi systemd[1]: Started PM2 process manager.
+[DONE] 
++---------------------------------------+
+[PM2] Freeze a process list on reboot via:
+$ pm2 save
+
+[PM2] Remove init script via:
+$ pm2 unstartup systemd
+[PM2] Saving current process list...
+[PM2] Successfully saved in /root/.pm2/dump.pm2
