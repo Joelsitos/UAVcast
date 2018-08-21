@@ -1,12 +1,12 @@
 # UAVcast
 
-### UAVcast-PRO edition is now available. Read more here [UAVcast-Pro](https://www.uavmatrix.com/d/11200-uavcast-pro-professional-software-for-companion-computer-based-uav-s) for detailed information
+### UAVcast-PRO & Basic edition is now available. Read more here [UAVcast-Pro](https://www.uavmatrix.com)
 
 ### See [UAVcast docs](http://uavcast.uavmatrix.com) for detailed information
 Complete Drone casting software for Raspberry PI in conjuction with 3G / 4G or WiFi. Can be used with Ardupilot based board, APM, Pixhawk, Navio (Emlid.com)
 
 Discussion forum thread
-[UAVcast](http://uavmatrix.com/d/5110-UAVcast-Casting-software-for-Raspberry-PI-Supports-3G-4G-WiFi)
+[UAVcast](http://discuss.uavmatrix.com/d/5110-UAVcast-Casting-software-for-Raspberry-PI-Supports-3G-4G-WiFi)
 
 
 ### Installation
@@ -20,7 +20,7 @@ sudo ./install.sh web
 ```
 
 Open UAVcast in your favorite web browser and start casting. http://ip-to-your-raspberry
-![UAVcast Web](http://uavmatrix.com/assets/files/2017-10-17/1508203664-0-2017-10-17-03-25-35.png)
+![UAVcast Web](http://discuss.uavmatrix.com/assets/files/2017-10-17/1508203664-0-2017-10-17-03-25-35.png)
 
  
 ### Video
@@ -37,4 +37,4 @@ If you are using PiCam, remember to enable the camera in ```Raspi-Config```
 
 ## Authors
 
-* **Bernt Christian Egeland** - *creator and founder of UAVmatrix.com* - (http://uavmatrix.com)
+* **Bernt Christian Egeland** - *creator and founder of UAVmatrix.com* - (https://uavmatrix.com)
