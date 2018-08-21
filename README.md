@@ -2,7 +2,8 @@
 
 ### UAVcast-PRO & Basic edition is now available. Read more here [UAVcast-Pro](https://www.uavmatrix.com)
 
-### See [UAVcast docs](http://uavcast.uavmatrix.com) for detailed information
+### See [UAVcast docs](http://docs.uavmatrix.com) for detailed information
+
 Complete Drone casting software for Raspberry PI in conjuction with 3G / 4G or WiFi. Can be used with Ardupilot based board, APM, Pixhawk, Navio (Emlid.com)
 
 Discussion forum thread
