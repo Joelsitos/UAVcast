@@ -1,6 +1,7 @@
-# UAVcast
+# This version is depreciated and no longer maintained. UAVcast-PRO & Basic edition is now available. Read more here [UAVcast-Pro](https://www.uavmatrix.com)
 
-### UAVcast-PRO & Basic edition is now available. Read more here [UAVcast-Pro](https://www.uavmatrix.com)
+
+#UAVcast
 
 ### See [UAVcast docs](http://docs.uavmatrix.com) for detailed information
 
