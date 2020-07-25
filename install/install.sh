@@ -92,7 +92,7 @@ cd $Basefolder/packages
 
 echo -ne '######################    (92%)\r'
 #Mavproxy
-git clone https://github.com/UAVmatrix/cmavnode.git >> $logfile 2>&1 
+git clone https://github.com/Joelsitos/cmavnode.git >> $logfile 2>&1 
 
 echo -ne '########################  (95%)\r'
 # Create symlink to cmavnode
